@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<UsualGroup name="ГруппаГлобальныйСписок" id="121">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа глобальный список</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа глобальный список</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаГлобальныйСписокРасширеннаяПодсказка" id="122"/>
+			<ChildItems>
+				<CheckBoxField name="Глобальный" id="108">
+					<DataPath>Объект.Глобальный</DataPath>
+					<CheckBoxType>Switcher</CheckBoxType>
+					<ContextMenu name="ГлобальныйКонтекстноеМеню" id="109"/>
+					<ExtendedTooltip name="ГлобальныйРасширеннаяПодсказка" id="110"/>
+					<Events>
+						<Event name="OnChange">ГлобальныйПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="ГруппаРсположениеСписка" id="111">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расположение списка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа рсположение списка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаРсположениеСпискаРасширеннаяПодсказка" id="112"/>
+					<ChildItems>
+						<InputField name="РасположениеСписка" id="83">
+							<DataPath>Объект.РасположениеСписка</DataPath>
+							<Visible>false</Visible>
+							<DropListButton>false</DropListButton>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="РасположениеСпискаКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="РасположениеСпискаРасширеннаяПодсказка" id="85"/>
+							<Events>
+								<Event name="OnChange">РасположениеСпискаПриИзменении</Event>
+								<Event name="StartChoice">РасположениеСпискаНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПутьКГлобальнымСпискам" id="123">
+							<DataPath>ПутьКГлобальнымСпискам</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Путь</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Значение хранится в константе "ПутьКГлобальнымСпискам". Для изменения перейдите в раздел "Справочники и настройки" и выберите  "Параметры и настройки".</v8:content>
+								</v8:item>
+							</ToolTip>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ПутьКГлобальнымСпискамКонтекстноеМеню" id="124"/>
+							<ExtendedTooltip name="ПутьКГлобальнымСпискамРасширеннаяПодсказка" id="125"/>
+						</InputField>
+						<Button name="СохранитьСписокБаз" id="119">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СохранитьСписокБаз</CommandName>
+							<ExtendedTooltip name="СохранитьСписокБазРасширеннаяПодсказка" id="120"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Пользователь" id="86">
+			<DataPath>Объект.Пользователь</DataPath>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="87"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="88"/>
+		</InputField>
+		<Table name="ДопПараметры" id="4">
+			<Representation>List</Representation>
+			<Visible>false</Visible>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ДопПараметры</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДопПараметрыКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="ДопПараметрыКоманднаяПанель" id="6"/>
+			<ExtendedTooltip name="ДопПараметрыРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="ДопПараметрыСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>ДопПараметры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДопПараметрыСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ДопПараметрыСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДопПараметрыСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>ДопПараметры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДопПараметрыСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ДопПараметрыСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДопПараметрыУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>ДопПараметры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДопПараметрыУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ДопПараметрыУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДопПараметрыНомерСтроки" id="17">
+					<DataPath>Объект.ДопПараметры.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДопПараметрыНомерСтрокиКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ДопПараметрыНомерСтрокиРасширеннаяПодсказка" id="19"/>
+				</LabelField>
+				<InputField name="ДопПараметрыИнформационнаяБаза" id="20">
+					<DataPath>Объект.ДопПараметры.ИнформационнаяБаза</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДопПараметрыИнформационнаяБазаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДопПараметрыИнформационнаяБазаРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ДопПараметрыНаименование" id="32">
+					<DataPath>Объект.ДопПараметры.Наименование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДопПараметрыНаименованиеКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДопПараметрыНаименованиеРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="ДопПараметрыПоложениеИБВДеревеСписка" id="23">
+					<DataPath>Объект.ДопПараметры.ПоложениеИБВДеревеСписка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДопПараметрыПоложениеИБВДеревеСпискаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ДопПараметрыПоложениеИБВДеревеСпискаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ДопПараметрыВерсияПлатформы" id="26">
+					<DataPath>Объект.ДопПараметры.ВерсияПлатформы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДопПараметрыВерсияПлатформыКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ДопПараметрыВерсияПлатформыРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ДопПараметрыСкоростьКлиентскогоСоединения" id="71">
+					<DataPath>Объект.ДопПараметры.СкоростьКлиентскогоСоединения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДопПараметрыСкоростьКлиентскогоСоединенияКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="ДопПараметрыСкоростьКлиентскогоСоединенияРасширеннаяПодсказка" id="73"/>
+				</InputField>
+				<InputField name="ДопПараметрыТипКлиентскогоПриложения" id="74">
+					<DataPath>Объект.ДопПараметры.ТипКлиентскогоПриложения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДопПараметрыТипКлиентскогоПриложенияКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ДопПараметрыТипКлиентскогоПриложенияРасширеннаяПодсказка" id="76"/>
+				</InputField>
+				<InputField name="ДопПараметрыРазрядностьКлиентскогоПриложения" id="77">
+					<DataPath>Объект.ДопПараметры.РазрядностьКлиентскогоПриложения</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДопПараметрыРазрядностьКлиентскогоПриложенияКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ДопПараметрыРазрядностьКлиентскогоПриложенияРасширеннаяПодсказка" id="79"/>
+				</InputField>
+				<InputField name="ДопПараметрыПараметрЗапуска" id="89">
+					<DataPath>Объект.ДопПараметры.ПараметрЗапуска</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДопПараметрыПараметрЗапускаКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="ДопПараметрыПараметрЗапускаРасширеннаяПодсказка" id="91"/>
+				</InputField>
+				<CheckBoxField name="ДопПараметрыПараметрыЗаполнены" id="98">
+					<DataPath>Объект.ДопПараметры.ПараметрыЗаполнены</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ДопПараметрыПараметрыЗаполненыКонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="ДопПараметрыПараметрыЗаполненыРасширеннаяПодсказка" id="100"/>
+				</CheckBoxField>
+				<InputField name="ДопПараметрыУровень" id="101">
+					<DataPath>Объект.ДопПараметры.Уровень</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДопПараметрыУровеньКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="ДопПараметрыУровеньРасширеннаяПодсказка" id="103"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<Table name="ДеревоИБ" id="35">
+			<Representation>Tree</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<DataPath>ДеревоИБ</DataPath>
+			<ContextMenu name="ДеревоИБКонтекстноеМеню" id="36"/>
+			<AutoCommandBar name="ДеревоИБКоманднаяПанель" id="37"/>
+			<ExtendedTooltip name="ДеревоИБРасширеннаяПодсказка" id="38"/>
+			<SearchStringAddition name="ДеревоИБСтрокаПоиска" id="39">
+				<AdditionSource>
+					<Item>ДеревоИБ</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоИБСтрокаПоискаКонтекстноеМеню" id="40"/>
+				<ExtendedTooltip name="ДеревоИБСтрокаПоискаРасширеннаяПодсказка" id="41"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДеревоИБСостояниеПросмотра" id="42">
+				<AdditionSource>
+					<Item>ДеревоИБ</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоИБСостояниеПросмотраКонтекстноеМеню" id="43"/>
+				<ExtendedTooltip name="ДеревоИБСостояниеПросмотраРасширеннаяПодсказка" id="44"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДеревоИБУправлениеПоиском" id="45">
+				<AdditionSource>
+					<Item>ДеревоИБ</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДеревоИБУправлениеПоискомКонтекстноеМеню" id="46"/>
+				<ExtendedTooltip name="ДеревоИБУправлениеПоискомРасширеннаяПодсказка" id="47"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">ДеревоИБВыбор</Event>
+				<Event name="BeforeAddRow">ДеревоИБПередНачаломДобавления</Event>
+				<Event name="OnChange">ДеревоИБПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ДеревоИБУровень" id="95">
+					<DataPath>ДеревоИБ.Уровень</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоИБУровеньКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="ДеревоИБУровеньРасширеннаяПодсказка" id="97"/>
+				</InputField>
+				<InputField name="ДеревоИБНаименование" id="60">
+					<DataPath>ДеревоИБ.Наименование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоИБНаименованиеКонтекстноеМеню" id="61"/>
+					<ExtendedTooltip name="ДеревоИБНаименованиеРасширеннаяПодсказка" id="62"/>
+				</InputField>
+				<InputField name="ДеревоИБИнформационнаяБаза" id="48">
+					<DataPath>ДеревоИБ.ИнформационнаяБаза</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоИБИнформационнаяБазаКонтекстноеМеню" id="49"/>
+					<ExtendedTooltip name="ДеревоИБИнформационнаяБазаРасширеннаяПодсказка" id="50"/>
+					<Events>
+						<Event name="OnChange">ДеревоИБИнформационнаяБазаПриИзменении</Event>
+						<Event name="ChoiceProcessing">ДеревоИБИнформационнаяБазаОбработкаВыбора</Event>
+					</Events>
+				</InputField>
+				<InputField name="ДеревоИБГруппа" id="51">
+					<DataPath>ДеревоИБ.ПоложениеИБВДеревеСписка</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоИБГруппаКонтекстноеМеню" id="52"/>
+					<ExtendedTooltip name="ДеревоИБГруппаРасширеннаяПодсказка" id="53"/>
+				</InputField>
+				<InputField name="ДеревоИБДопПараметры" id="57">
+					<DataPath>ДеревоИБ.ДопПараметры</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоИБДопПараметрыКонтекстноеМеню" id="58"/>
+					<ExtendedTooltip name="ДеревоИБДопПараметрыРасширеннаяПодсказка" id="59"/>
+				</InputField>
+				<InputField name="ДеревоИБДопПараметрыПредставление" id="92">
+					<DataPath>ДеревоИБ.ДопПараметрыПредставление</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп параметры</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДеревоИБДопПараметрыПредставлениеКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="ДеревоИБДопПараметрыПредставлениеРасширеннаяПодсказка" id="94"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СпискиИнформационныхБаз</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<Columns>
+				<AdditionalColumns table="Объект.ДопПараметры"/>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДеревоИБ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИнформационнаяБаза" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информационная база</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ИнформационныеБазы1С</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПоложениеИБВДеревеСписка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Положение ИБ в дереве списка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДопПараметры" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп параметры</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Наименование" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<FillCheck>ShowError</FillCheck>
+				</Column>
+				<Column name="ДопПараметрыПредставление" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп параметры представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Уровень" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровень</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПутьКГлобальнымСпискам" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к глобальным спискам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьСписокБаз" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить список баз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить список баз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьСписокБаз</Action>
+		</Command>
+	</Commands>
+</Form>

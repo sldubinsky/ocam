@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ИдентификаторНастройки" id="7">
+			<DataPath>Объект.ИдентификаторНастройки</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИдентификаторНастройкиКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ИдентификаторНастройкиРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ТипНастройки" id="10">
+			<DataPath>Объект.ТипНастройки</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипНастройкиКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТипНастройкиРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<UsualGroup name="ГруппаПримитивная" id="38">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа примитивная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа примитивная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПримитивнаяРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<InputField name="ЗначениеНастройкиПримитив" id="16">
+					<DataPath>Объект.ЗначениеНастройкиПримитив</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗначениеНастройкиПримитивКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ЗначениеНастройкиПримитивРасширеннаяПодсказка" id="18"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСсылка" id="40">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа ссылка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСсылкаРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="ЗначениеНастройкиСсылка" id="13">
+					<DataPath>Объект.ЗначениеНастройкиСсылка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗначениеНастройкиСсылкаКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="ЗначениеНастройкиСсылкаРасширеннаяПодсказка" id="15"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаМассив" id="42">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа массив</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа массив</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаМассивРасширеннаяПодсказка" id="43"/>
+			<ChildItems>
+				<Table name="МассивЗначений" id="19">
+					<Representation>List</Representation>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.МассивЗначений</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="МассивЗначенийКонтекстноеМеню" id="20"/>
+					<AutoCommandBar name="МассивЗначенийКоманднаяПанель" id="21"/>
+					<ExtendedTooltip name="МассивЗначенийРасширеннаяПодсказка" id="22"/>
+					<SearchStringAddition name="МассивЗначенийСтрокаПоиска" id="23">
+						<AdditionSource>
+							<Item>МассивЗначений</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МассивЗначенийСтрокаПоискаКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="МассивЗначенийСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="МассивЗначенийСостояниеПросмотра" id="26">
+						<AdditionSource>
+							<Item>МассивЗначений</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="МассивЗначенийСостояниеПросмотраКонтекстноеМеню" id="27"/>
+						<ExtendedTooltip name="МассивЗначенийСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="МассивЗначенийУправлениеПоиском" id="29">
+						<AdditionSource>
+							<Item>МассивЗначений</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="МассивЗначенийУправлениеПоискомКонтекстноеМеню" id="30"/>
+						<ExtendedTooltip name="МассивЗначенийУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="МассивЗначенийНомерСтроки" id="32">
+							<DataPath>Объект.МассивЗначений.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МассивЗначенийНомерСтрокиКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="МассивЗначенийНомерСтрокиРасширеннаяПодсказка" id="34"/>
+						</LabelField>
+						<InputField name="МассивЗначенийЗначениеУниверсальное" id="35">
+							<DataPath>Объект.МассивЗначений.ЗначениеУниверсальное</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="МассивЗначенийЗначениеУниверсальноеКонтекстноеМеню" id="36"/>
+							<ExtendedTooltip name="МассивЗначенийЗначениеУниверсальноеРасширеннаяПодсказка" id="37"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаХранилище" id="44">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа хранилище</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа хранилище</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаХранилищеРасширеннаяПодсказка" id="45"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияХранилище" id="46">
+					<TextColor>style:FieldSelectionBackColor</TextColor>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные сохранены в хранилище, не визуализируются.</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияХранилищеКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ДекорацияХранилищеРасширеннаяПодсказка" id="48"/>
+				</LabelDecoration>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.НастройкиХранилищеКВА</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

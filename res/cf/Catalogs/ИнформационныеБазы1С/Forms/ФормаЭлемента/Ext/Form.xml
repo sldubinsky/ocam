@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаУправлениеИБ" id="31">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УправлениеИБ</CommandName>
+				<ExtendedTooltip name="ФормаУправлениеИБРасширеннаяПодсказка" id="32"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="25">
+			<DataPath>Объект.Description</DataPath>
+			<Mask>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!</Mask>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ИД_ИнформационнойБазы" id="13">
+			<DataPath>Объект.ИД_ИнформационнойБазы</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ИД_ИнформационнойБазыКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ИД_ИнформационнойБазыРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="СерверПриложений" id="16">
+			<DataPath>Объект.СерверПриложений</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<QuickChoice>false</QuickChoice>
+			<TextEdit>false</TextEdit>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+			<ContextMenu name="СерверПриложенийКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="СерверПриложенийРасширеннаяПодсказка" id="18"/>
+			<Events>
+				<Event name="StartChoice">СерверПриложенийНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="СерверБазДанных" id="19">
+			<DataPath>Объект.СерверБазДанных</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<QuickChoice>false</QuickChoice>
+			<TextEdit>false</TextEdit>
+			<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+			<ContextMenu name="СерверБазДанныхКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="СерверБазДанныхРасширеннаяПодсказка" id="21"/>
+			<Events>
+				<Event name="StartChoice">СерверБазДанныхНачалоВыбора</Event>
+			</Events>
+		</InputField>
+		<InputField name="Пользователь" id="28">
+			<DataPath>Объект.Пользователь</DataPath>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="АвторизационныеДанные" id="22">
+			<DataPath>Объект.АвторизационныеДанные</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="АвторизационныеДанныеКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="АвторизационныеДанныеРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="Проект" id="4">
+			<DataPath>Объект.Проект</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПроектКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ПроектРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Контур" id="7">
+			<DataPath>Объект.Контур</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КонтурКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КонтурРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<TextDocumentField name="ОписаниеИнформационнойБазы" id="10">
+			<DataPath>Объект.ОписаниеИнформационнойБазы</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<Width>53</Width>
+			<ContextMenu name="ОписаниеИнформационнойБазыКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ОписаниеИнформационнойБазыРасширеннаяПодсказка" id="12"/>
+		</TextDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ИнформационныеБазы1С</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УправлениеИБ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление ИБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УправлениеИБ</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПриемникИБ">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИнформационныеБазы1С</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСохранитьНастройки" id="21">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СохранитьИЗакрыть</CommandName>
+				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+				<ExtendedTooltip name="ФормаСохранитьНастройкиРасширеннаяПодсказка" id="22"/>
+			</Button>
+			<Button name="ФормаЗакрытьФорму" id="19">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьФормуРасширеннаяПодсказка" id="20"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ИнформационнаяБаза" id="23">
+			<DataPath>ИнформационнаяБаза</DataPath>
+			<Enabled>false</Enabled>
+			<ContextMenu name="ИнформационнаяБазаКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ИнформационнаяБазаРасширеннаяПодсказка" id="25"/>
+		</InputField>
+		<InputField name="ПараметрЗапуска" id="29">
+			<DataPath>ПараметрЗапуска</DataPath>
+			<ContextMenu name="ПараметрЗапускаКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ПараметрЗапускаРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<InputField name="ВерсияПлатформы" id="26">
+			<DataPath>ВерсияПлатформы</DataPath>
+			<ContextMenu name="ВерсияПлатформыКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="ВерсияПлатформыРасширеннаяПодсказка" id="28"/>
+		</InputField>
+		<InputField name="СкоростьКлиентскогоСоединения" id="7">
+			<DataPath>СкоростьКлиентскогоСоединения</DataPath>
+			<ContextMenu name="СкоростьКлиентскогоСоединенияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="СкоростьКлиентскогоСоединенияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ТипКлиентскогоПриложения" id="10">
+			<DataPath>ТипКлиентскогоПриложения</DataPath>
+			<ContextMenu name="ТипКлиентскогоПриложенияКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТипКлиентскогоПриложенияРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="РазрядностьКлиентскогоПриложения" id="13">
+			<DataPath>РазрядностьКлиентскогоПриложения</DataPath>
+			<ContextMenu name="РазрядностьКлиентскогоПриложенияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="РазрядностьКлиентскогоПриложенияРасширеннаяПодсказка" id="15"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПорядокВСписке" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок в списке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПорядокВДереве" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядок в дереве</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СкоростьКлиентскогоСоединения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скорость клиентского соединения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.СкоростьКлиентскогоСоединения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипКлиентскогоПриложения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип клиентского приложения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыКлиентскогоПриложения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрядностьКлиентскогоПриложения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разрядность клиентского приложения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.РазрядностьКлиентскогоПриложения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнформационнаяБаза" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информационная база</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИнформационныеБазы1С</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Ссылка" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СпискиИнформационныхБаз</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияПлатформы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия платформы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВерсииПлатформы1С</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрЗапуска" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметр запуска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗакрытьФорму" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
+		</Command>
+		<Command name="СохранитьИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьИЗакрыть</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ПараметрЗапуска">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ВерсияПлатформы">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ВерсииПлатформы1С</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="СкоростьКлиентскогоСоединения">
+			<Type>
+				<v8:Type>cfg:EnumRef.СкоростьКлиентскогоСоединения</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ТипКлиентскогоПриложения">
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыКлиентскогоПриложения</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="РазрядностьКлиентскогоПриложения">
+			<Type>
+				<v8:Type>cfg:EnumRef.РазрядностьКлиентскогоПриложения</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ИнформационнаяБаза">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ИнформационныеБазы1С</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

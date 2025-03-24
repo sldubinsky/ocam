@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.18">
+	<Item id="29d7e032-4b59-4d86-8b8d-f2362ab894a3">
+		<Name>НочныеКопии</Name>
+		<Code>000000002</Code>
+		<Description>Ночные копии рабочих баз</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="a8f5b0df-a118-4f05-97cc-9b9bb621cb26">
+		<Name>Предрелиз</Name>
+		<Code>000000004</Code>
+		<Description>Предрелизные копии рабочих баз</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9ea38789-71d9-4125-87d7-f9935fa0a3be">
+		<Name>Продуктив</Name>
+		<Code>000000001</Code>
+		<Description>Рабочие базы</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="62ae3315-4f04-48fc-acea-a43247fe060e">
+		<Name>Разработка</Name>
+		<Code>000000003</Code>
+		<Description>Разработка</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

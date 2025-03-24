@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Наименование" id="1">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<UsualGroup name="ГруппаИдентификатор" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа идентификатор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа идентификатор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаИдентификаторРасширеннаяПодсказка" id="28"/>
+			<ChildItems>
+				<InputField name="ИДКластера" id="16">
+					<DataPath>Объект.ИДКластера</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИДКластераКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ИДКластераРасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<Button name="ЗаполнитьИД" id="29">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаполнитьИД</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;-- Заполнить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ЗаполнитьИДРасширеннаяПодсказка" id="30"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Контур" id="13">
+			<DataPath>Объект.Контур</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КонтурКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="КонтурРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Pages name="ГруппаНастройкиСерверов" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки серверов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки серверов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаНастройкиСерверовРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<Page name="ГруппаОсновнойСервер" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основной сервер</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа основной сервер</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОсновнойСерверРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<InputField name="Сервер" id="4">
+							<DataPath>Объект.Сервер</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СерверКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="СерверРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<UsualGroup name="ГруппаПорты" id="25">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа порты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа порты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПортыРасширеннаяПодсказка" id="26"/>
+							<ChildItems>
+								<InputField name="ПортКластера" id="19">
+									<DataPath>Объект.ПортКластера</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ЧГ=0</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="ПортКластераКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ПортКластераРасширеннаяПодсказка" id="21"/>
+								</InputField>
+								<InputField name="ПортСервераАдминистрирования" id="31">
+									<DataPath>Объект.ПортСервераАдминистрирования</DataPath>
+									<ContextMenu name="ПортСервераАдминистрированияКонтекстноеМеню" id="32"/>
+									<ExtendedTooltip name="ПортСервераАдминистрированияРасширеннаяПодсказка" id="33"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="Платформа" id="7">
+							<DataPath>Объект.Платформа</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПлатформаКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПлатформаРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="АвторизационныеДанные" id="22">
+							<DataPath>Объект.АвторизационныеДанные</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="АвторизационныеДанныеКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="АвторизационныеДанныеРасширеннаяПодсказка" id="24"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДополнительныеСервера" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительные сервера</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дополнительные сервера</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДополнительныеСервераРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<Table name="ДополнительныеСервера" id="40">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ДополнительныеСервера</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДополнительныеСервераКонтекстноеМеню" id="41"/>
+							<AutoCommandBar name="ДополнительныеСервераКоманднаяПанель" id="42"/>
+							<ExtendedTooltip name="ДополнительныеСервераРасширеннаяПодсказка" id="43"/>
+							<SearchStringAddition name="ДополнительныеСервераСтрокаПоиска" id="44">
+								<AdditionSource>
+									<Item>ДополнительныеСервера</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительныеСервераСтрокаПоискаКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="ДополнительныеСервераСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДополнительныеСервераСостояниеПросмотра" id="47">
+								<AdditionSource>
+									<Item>ДополнительныеСервера</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительныеСервераСостояниеПросмотраКонтекстноеМеню" id="48"/>
+								<ExtendedTooltip name="ДополнительныеСервераСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДополнительныеСервераУправлениеПоиском" id="50">
+								<AdditionSource>
+									<Item>ДополнительныеСервера</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДополнительныеСервераУправлениеПоискомКонтекстноеМеню" id="51"/>
+								<ExtendedTooltip name="ДополнительныеСервераУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДополнительныеСервераНомерСтроки" id="53">
+									<DataPath>Объект.ДополнительныеСервера.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДополнительныеСервераНомерСтрокиКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ДополнительныеСервераНомерСтрокиРасширеннаяПодсказка" id="55"/>
+								</LabelField>
+								<InputField name="ДополнительныеСервераСерверПриложений" id="56">
+									<DataPath>Объект.ДополнительныеСервера.СерверПриложений</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ДополнительныеСервераСерверПриложенийКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ДополнительныеСервераСерверПриложенийРасширеннаяПодсказка" id="58"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаОписание" id="59">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Описание</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа описание</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаОписаниеРасширеннаяПодсказка" id="60"/>
+					<ChildItems>
+						<InputField name="Описание" id="10">
+							<DataPath>Объект.Описание</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>57</Width>
+							<ContextMenu name="ОписаниеКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="12"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СерверыПриложений1С</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьИД" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить ИД</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить ИД</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьИД</Action>
+		</Command>
+	</Commands>
+</Form>
